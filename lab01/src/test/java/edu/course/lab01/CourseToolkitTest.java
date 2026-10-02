@@ -95,7 +95,7 @@ class CourseToolkitTest {
     }
 
     @Test
-    void Test__ForValues() {
+    void averageThrowsForNullOrEmpty() {
         assertThrows(IllegalArgumentException.class,
                 () -> CourseToolkit.average(null));
         assertThrows(IllegalArgumentException.class,
