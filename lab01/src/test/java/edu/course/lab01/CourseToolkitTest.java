@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CourseToolkitTest {
 
@@ -53,5 +54,24 @@ class CourseToolkitTest {
         boolean result = CourseToolkit.isPrime(49);
 
         assertFalse(result);
+    }
+
+    @Test
+    void Test_1_ForPalindromeString() {
+        boolean result = CourseToolkit.isPalindrome("level");
+
+        assertTrue(result);
+    }
+
+    @Test
+    void Test_2_ForPalindromeString() {
+        boolean result = CourseToolkit.isPalindrome("home");
+
+        assertFalse(result);
+    }
+
+    @Test void isPalindromeThrowsForNull() {
+        assertThrows(IllegalArgumentException.class,
+                () -> CourseToolkit.isPalindrome(null));
     }
 }
