@@ -22,28 +22,34 @@ class CourseToolkitTest {
     }
 
     @Test
-    void Test_1_ForPrime() {
+    void returnsTrueForNegativeEvenNumber() {
+
+        assertTrue(CourseToolkit.isEven(-8));
+    }
+
+    @Test
+    void Test_1_ForPrimeNumber() {
         boolean result = CourseToolkit.isPrime(1);
 
         assertFalse(result);
     }
 
     @Test
-    void Test_2_ForPrime() {
+    void Test_2_ForPrimeNumber() {
         boolean result = CourseToolkit.isPrime(2);
 
         assertTrue(result);
     }
 
     @Test
-    void Test_3_ForPrime() {
+    void Test_3_ForPrimeNumber() {
         boolean result = CourseToolkit.isPrime(20);
 
         assertFalse(result);
     }
 
     @Test
-    void Test_4_ForPrime() {
+    void Test_4_ForPrimeNumber() {
         boolean result = CourseToolkit.isPrime(49);
 
         assertFalse(result);
