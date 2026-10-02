@@ -74,4 +74,31 @@ class CourseToolkitTest {
         assertThrows(IllegalArgumentException.class,
                 () -> CourseToolkit.isPalindrome(null));
     }
+
+    @Test
+    void Test_1_ForAverageNumber() {
+        double result = CourseToolkit.average(new int[]{2, 4, 6});
+        boolean b = false;
+        if (result == 4.0)
+            b = true;
+        assertTrue(b);
+    }
+
+    @Test
+    void Test_2_ForAverageNumber() {
+        double result = CourseToolkit.average(new int[] {-2,-6,-7});
+
+        boolean b = false;
+        if(result==-5.0)
+            b = true;
+        assertTrue(b);
+    }
+
+    @Test
+    void Test__ForValues() {
+        assertThrows(IllegalArgumentException.class,
+                () -> CourseToolkit.average(null));
+        assertThrows(IllegalArgumentException.class,
+                () -> CourseToolkit.average(new int[] {}));
+    }
 }
