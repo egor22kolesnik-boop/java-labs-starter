@@ -20,4 +20,32 @@ class CourseToolkitTest {
 
         assertFalse(result);
     }
+
+    @Test
+    void Test_1_ForPrime() {
+        boolean result = CourseToolkit.isPrime(1);
+
+        assertFalse(result);
+    }
+
+    @Test
+    void Test_2_ForPrime() {
+        boolean result = CourseToolkit.isPrime(2);
+
+        assertTrue(result);
+    }
+
+    @Test
+    void Test_3_ForPrime() {
+        boolean result = CourseToolkit.isPrime(20);
+
+        assertFalse(result);
+    }
+
+    @Test
+    void Test_4_ForPrime() {
+        boolean result = CourseToolkit.isPrime(49);
+
+        assertFalse(result);
+    }
 }
